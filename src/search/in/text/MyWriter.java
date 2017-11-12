@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * Contains method to text in file.
  * 
  * @author Nosenko Anatolii
- * @version 11.11.2017
+ * @version 11 November 2017
  */
 public class MyWriter {
 	

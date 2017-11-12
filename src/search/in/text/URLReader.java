@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  * Contains method to read page by URL.
  * 
  * @author Nosenko Anatolii
- * @version 11.11.2017
+ * @version 11 November 2017
  */
 public class URLReader {
 	/**
