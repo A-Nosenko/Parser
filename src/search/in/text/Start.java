@@ -118,7 +118,7 @@ public class Start {
 					
 					try {
 						URL url = new URL(address);
-						image = ImageIO.read(url);
+						image = ImageIO.read(url.openStream());
 						if (ImageValidator.validate(minW, maxW, minH, maxH, image)) {
 							String[] addressDisassebbled = address.split(PATTERN_TO_SPLIT);
 							String extension = null;
