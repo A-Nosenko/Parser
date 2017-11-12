@@ -3,7 +3,6 @@ package search.in.text;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
@@ -32,12 +31,25 @@ public class Saver {
 	 * @param image Image to save.
 	 */
 	public static void save(String address, String extension, BufferedImage image) {
-		
-		
+			
 		String name = null;
+		boolean flag = true;
 		try {
-			extension = (extension == null) ? "jpg" : extension;
-			name = nameCount++ + "." + extension ;
+			if (extension != null) {
+				name = nameCount++ + "." + extension ;
+				ImageIO.write(image, extension, new File(PATH + name));
+			} else {
+				while(flag) {
+					for(String extensionTest : ImageIO.getReaderFileSuffixes()) {
+						LOG.info(extensionTest);
+						if (ImageIO.write(image, extensionTest, new File(PATH + name))) {
+							System.out.println(extensionTest);
+							flag = false;
+						}
+					}
+				}
+			}
+		
 			ImageIO.write(image, extension, new File(PATH + name));
 		} catch (IOException e) {
 			LOG.info(e.getMessage());

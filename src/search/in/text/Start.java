@@ -25,13 +25,13 @@ public class Start {
 	private static final String RECEIVED = "Получено регулярное выражение: ";
 	private static final String PARSING = " Идет парсинг...";
 	private static final String RESTRACTION_MIN_WIDTH =
-			"Ведите минимальную высоту изображения в пикселях \n или Enter чтобы пропустить ";
-	private static final String RESTRACTION_MAX_WIDTH =
-			"Ведите максимальную высоту изображения в пикселях \n или Enter чтобы пропустить ";
-	private static final String RESTRACTION_MIN_HIGH =
 			"Ведите минимальную ширину изображения в пикселях \n или Enter чтобы пропустить ";
-	private static final String RESTRACTION_MAX_HIGH =
+	private static final String RESTRACTION_MAX_WIDTH =
 			"Ведите максимальную ширину изображения в пикселях \n или Enter чтобы пропустить ";
+	private static final String RESTRACTION_MIN_HIGH =
+			"Ведите минимальную высоту изображения в пикселях \n или Enter чтобы пропустить ";
+	private static final String RESTRACTION_MAX_HIGH =
+			"Ведите максимальную высоту изображения в пикселях \n или Enter чтобы пропустить ";
 	private static final String IMAGE_PARSING = "Парсинг с сохранением изображений с параметрами: ";
 	
 	private static final String OUT_FILE = "out.txt";
@@ -42,7 +42,7 @@ public class Start {
 	 * Time out to wait if some exception has place.
 	 * For example the site is overloaded.
 	 */
-	private static final long TIME_OUT = 1000;
+	private static final long TIME_OUT = 10;
 		
 	/**
 	 * Entry point. Makes dialog with user.
