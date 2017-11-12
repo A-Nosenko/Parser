@@ -19,13 +19,15 @@ public class ImageValidator {
 	 */
 	public static boolean validate (Integer minW, Integer maxW, Integer minH,
 			Integer maxH, BufferedImage image) {
-		int width = image.getWidth();
-		int hight = image.getHeight();
-		if ((width >= minW) && (width <= maxW)
-				&& (hight >= minH) && (hight <= maxH)) {
-			return true;
+		if (image != null) {
+			int width = image.getWidth();
+			int hight = image.getHeight();
+			if ((width >= minW) && (width <= maxW)
+					&& (hight >= minH) && (hight <= maxH)) {
+				return true;
+			}
 		}
-			
+					
 		return false;
 	}
 }
